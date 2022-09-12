@@ -14,6 +14,9 @@
         }
 
         .norm-border {
+            display: block;
+            width: 320px;
+            height: 480px;
             border: 3px solid;
             border-radius: 30px;
         }
@@ -26,16 +29,17 @@
             border-color: rgb(3, 174, 3);
         }
         @media screen and (max-width: 600px)  {
+
             #canvasOutput {
-                width: 100%;
-                height: auto;
+                width: 90%;
+                height: 300px;
             }
         }
     </style>
     </head>
   <body class="">
     <div class="border border-primary d-flex align-items-center justify-content-center">
-        <video class="d-none" src="" id="videoInput" width="640" height="480"></video>
+        <video class="d-none" src="" id="videoInput" width="400" height="800"></video>
         <canvas class="norm-border white-border" id="canvasOutput"></canvas>
         <canvas class="d-none" id="transform"></canvas>
     </div>
@@ -57,7 +61,7 @@
         }
 
         let video = document.getElementById("videoInput"); // video is the id of video tag
-        video.style.visibility = "hidden"
+        // video.style.visibility = "hidden"
         let streaming = true;
         const canvas = document.getElementById('canvasOutput');
         let st = null;
