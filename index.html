@@ -184,11 +184,11 @@
                                 let M = cv.getPerspectiveTransform(srcCoords, finalDestCoords);
                                 cv.warpPerspective(src_copy, dst, M, dsize, cv.INTER_LINEAR, cv.BORDER_CONSTANT, new cv.Scalar());
                                 cv.imshow('transform', dst);
-                                let link = document.createElement('a');
-                                link.download = 'test.png';
-                                link.href = document.getElementById('transform').toDataURL()
-                                link.click();
-                                streaming = false;
+                                // let link = document.createElement('a');
+                                // link.download = 'test.png';
+                                // link.href = document.getElementById('transform').toDataURL()
+                                // link.click();
+                                // streaming = false;
                             }
                         }
                         cv.imshow('canvasOutput', src);
