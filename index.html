@@ -39,7 +39,7 @@
     </head>
   <body class="">
     <div class="border border-primary d-flex align-items-center justify-content-center">
-        <video class="d-none" src="" id="videoInput" width="400" height="800"></video>
+        <video class="" src="" id="videoInput" width="400" height="800"></video>
         <canvas class="norm-border white-border" id="canvasOutput"></canvas>
         <canvas class="d-none" id="transform"></canvas>
     </div>
@@ -189,10 +189,10 @@
                                 let M = cv.getPerspectiveTransform(srcCoords, finalDestCoords);
                                 cv.warpPerspective(src_copy, dst, M, dsize, cv.INTER_LINEAR, cv.BORDER_CONSTANT, new cv.Scalar());
                                 cv.imshow('transform', dst);
-                                let link = document.createElement('a');
-                                link.download = 'test.png';
-                                link.href = document.getElementById('transform').toDataURL()
-                                link.click();
+                                // let link = document.createElement('a');
+                                // link.download = 'test.png';
+                                // link.href = document.getElementById('transform').toDataURL()
+                                // link.click();
                                 streaming = false;
                             }
                         }
